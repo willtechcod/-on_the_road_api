@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch --env-file .env src/server.ts",
-    "start": "node src/server.js"
+    "vercel-build": "npx prisma migrate deploy"
   },
   "keywords": [],
   "author": "William Pereira da Conceicao",
