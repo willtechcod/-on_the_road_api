@@ -49,6 +49,10 @@ app.register(createInvite);
 app.register(createLink);
 app.register(getLinks);
 
+app.get('/', () => {
+  return 'Server is running! ...🚀'
+})
+
 app.listen({ port: env.PORT }).then(() =>{
   console.log('Server is running! ...🚀')
 })
