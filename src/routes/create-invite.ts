@@ -12,7 +12,7 @@ import { env } from "../env";
 
 export async function createInvite(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().post(
-    '/trips/:tripId/invites', 
+    'trips/:tripId/invites', 
     {
     schema: {
       params: z.object({
@@ -49,7 +49,7 @@ export async function createInvite(app: FastifyInstance) {
     const mail = await getMailClient();
 
    
-        const confirmationLink = `${env.API_BASE_URL}/participants/${participant.id}/confirm`;
+        const confirmationLink = `${env.API_BASE_URL}participants/${participant.id}/confirm`;
 
         const message = await mail.sendMail({
           from: {

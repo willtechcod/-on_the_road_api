@@ -9,7 +9,7 @@ import { ClientError } from "../errors/client-error";
 
 export async function createLink(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().post(
-    '/trips/:tripId/links', 
+    'trips/:tripId/links', 
     {
     schema: {
       params: z.object({

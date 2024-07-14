@@ -10,7 +10,7 @@ import { ClientError } from "../errors/client-error";
 import { env } from "../env";
 
 export async function createTrip(app: FastifyInstance) {
-  app.withTypeProvider<ZodTypeProvider>().post('/trips', {
+  app.withTypeProvider<ZodTypeProvider>().post('trips', {
     schema: {
       body: z.object({
         destination: z.string().min(4),

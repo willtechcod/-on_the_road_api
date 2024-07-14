@@ -9,7 +9,7 @@ import { ClientError } from "../errors/client-error";
 import { env } from "../env";
 
 export async function confirmTrip(app: FastifyInstance) {
-  app.withTypeProvider<ZodTypeProvider>().get('/trips/:tripId/confirm', {
+  app.withTypeProvider<ZodTypeProvider>().get('trips/:tripId/confirm', {
     schema: {
       params: z.object({
         tripId: z.string().uuid(),
